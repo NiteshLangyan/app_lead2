@@ -26,7 +26,7 @@ const SignUpRender = (res, token, error, name, email) => {
 
 const SignInRender = (res, token, error, email) => {
     console.log('signin render');
-    return res.render('login',{
+    return res.render('../views/login.ejs',{
         csrfToken: token,
         error: error,
         email: email,
