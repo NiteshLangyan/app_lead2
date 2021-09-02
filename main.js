@@ -24,7 +24,7 @@ const store = new MongoDBStore({
 const server = express();
 
 server.set('view engine', 'ejs');
-server.set('views', path.join(__dirname, 'views'));
+server.set('views', path.join(__dirname, 'app', 'views'));
 
 server.use(
     helmet.contentSecurityPolicy({
