@@ -6,7 +6,7 @@ let _db;
 const MongoConnect = callback =>{
     MongoClient.connect(
         // `mongodb+srv://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_USER_PASSWORD}@cluster0.7ow4b.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`,
-        'mongodb://127.0.0.1:27017/leads',
+        process.env.mongoURI || 'mongodb://127.0.0.1:27017/leads',
         { useUnifiedTopology: true }
         )
         .then(client => {
