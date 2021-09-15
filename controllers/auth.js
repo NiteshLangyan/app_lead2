@@ -31,8 +31,7 @@ const SignInRender = (res, token, error, email) => {
     });
 }
 
-exports.SignIn = (req, res) => {0
-    console.log(req.session.email);
+exports.SignIn = (req, res) => {
     if(req.session.email){
         return res.redirect('/');
     }
