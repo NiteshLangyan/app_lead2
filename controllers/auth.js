@@ -15,7 +15,6 @@ const transporter = nodemailer.createTransport(transport({
 }));
 
 const SignUpRender = (res, token, error, name, email) => {
-   
     return res.render('sign-up',{
         csrfToken: token,
         error: error,
@@ -25,7 +24,6 @@ const SignUpRender = (res, token, error, name, email) => {
 }
 
 const SignInRender = (res, token, error, email) => {
-    // console.log('signin render');
     return res.render('login',{
         csrfToken: token,
         error: error,
@@ -148,7 +146,7 @@ exports.PasswordChangedAction = (req, res, next) => {
 }
 
 exports.SignInAction = (req, res, next) => {
-    console.log('signin action');
+    // console.log('signin action');
     const errors = validationResult(req).array();
     const email = req.body.email;
     let stripe_id
