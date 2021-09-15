@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport(transport({
 }));
 
 const SignUpRender = (res, token, error, name, email) => {
-    console.log('signup render');
+   
     return res.render('sign-up',{
         csrfToken: token,
         error: error,

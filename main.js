@@ -17,7 +17,7 @@ const errorcontroller = require('./controllers/errors');
 
 const store = new MongoDBStore({
     // uri: `mongodb+srv://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_USER_PASSWORD}@cluster0.7ow4b.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`,
-    uri: 'mongodb://127.0.0.1:27017/leads',
+    uri: process.env.mongoURI || 'mongodb://127.0.0.1:27017/leads',
     collection: 'sessions'
 });
 
